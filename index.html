@@ -127,6 +127,219 @@
 
   <!-- JavaScript -->
   <script>
+    // Property Data Model - Inspired by fam Properties structure
+    class PropertyModel {
+      constructor(data) {
+        this.id = data.id;
+        this.title = data.title;
+        this.price = data.price;
+        this.currency = data.currency || 'AED';
+        this.type = data.type; // apartment, villa, townhouse, office, plot
+        this.transactionType = data.transactionType; // buy, rent, off-plan
+        this.bedrooms = data.bedrooms;
+        this.bathrooms = data.bathrooms;
+        this.area = data.area;
+        this.areaUnit = data.areaUnit || 'sqft';
+        this.location = data.location;
+        this.developer = data.developer;
+        this.features = data.features || [];
+        this.images = data.images || [];
+        this.description = data.description;
+        this.amenities = data.amenities || [];
+        this.paymentPlan = data.paymentPlan;
+        this.completionDate = data.completionDate;
+        this.furnished = data.furnished || false;
+        this.luxury = data.luxury || false;
+        this.beachfront = data.beachfront || false;
+        this.status = data.status; // ready, under-construction, off-plan
+      }
+
+      getFormattedPrice() {
+        return `${this.currency} ${this.price.toLocaleString()}`;
+      }
+
+      getPropertyDetails() {
+        return `${this.bedrooms} Beds | ${this.bathrooms} Baths | ${this.area.toLocaleString()} ${this.areaUnit}`;
+      }
+    }
+
+    // Location/Area Model
+    class LocationModel {
+      constructor(data) {
+        this.id = data.id;
+        this.name = data.name;
+        this.type = data.type; // community, district, landmark
+        this.description = data.description;
+        this.averagePrice = data.averagePrice;
+        this.popularPropertyTypes = data.popularPropertyTypes || [];
+        this.amenities = data.amenities || [];
+        this.coordinates = data.coordinates;
+      }
+    }
+
+    // Developer Model
+    class DeveloperModel {
+      constructor(data) {
+        this.id = data.id;
+        this.name = data.name;
+        this.logo = data.logo;
+        this.description = data.description;
+        this.projects = data.projects || [];
+        this.established = data.established;
+        this.website = data.website;
+      }
+    }
+
+    // Sample Data - Based on fam Properties structure
+    const sampleProperties = [
+      new PropertyModel({
+        id: 1,
+        title: "Luxury Downtown Apartment",
+        price: 2500000,
+        currency: "AED",
+        type: "apartment",
+        transactionType: "buy",
+        bedrooms: 2,
+        bathrooms: 2,
+        area: 1200,
+        areaUnit: "sqft",
+        location: "Downtown Dubai",
+        developer: "Emaar Properties",
+        features: ["Balcony", "City View", "Parking"],
+        description: "Stunning 2-bedroom apartment in the heart of Downtown Dubai",
+        amenities: ["Swimming Pool", "Gym", "Concierge", "Security"],
+        paymentPlan: "70/30 Payment Plan",
+        status: "ready",
+        furnished: true,
+        luxury: true
+      }),
+      new PropertyModel({
+        id: 2,
+        title: "Modern Business Bay Villa",
+        price: 4500000,
+        currency: "AED",
+        type: "villa",
+        transactionType: "buy",
+        bedrooms: 4,
+        bathrooms: 5,
+        area: 3500,
+        areaUnit: "sqft",
+        location: "Business Bay",
+        developer: "DAMAC Properties",
+        features: ["Private Garden", "Maid's Room", "Study Room"],
+        description: "Spacious 4-bedroom villa with modern amenities",
+        amenities: ["Private Pool", "Garden", "Garage", "Security"],
+        paymentPlan: "60/40 Payment Plan",
+        status: "under-construction",
+        luxury: true
+      }),
+      new PropertyModel({
+        id: 3,
+        title: "Palm Jumeirah Beachfront Penthouse",
+        price: 8500000,
+        currency: "AED",
+        type: "penthouse",
+        transactionType: "buy",
+        bedrooms: 3,
+        bathrooms: 4,
+        area: 2800,
+        areaUnit: "sqft",
+        location: "Palm Jumeirah",
+        developer: "Nakheel",
+        features: ["Beach Access", "Private Terrace", "Sea View"],
+        description: "Exclusive beachfront penthouse with panoramic sea views",
+        amenities: ["Beach Access", "Spa", "Marina", "Restaurants"],
+        paymentPlan: "50/50 Payment Plan",
+        status: "ready",
+        furnished: true,
+        luxury: true,
+        beachfront: true
+      })
+    ];
+
+    const sampleLocations = [
+      new LocationModel({
+        id: 1,
+        name: "Downtown Dubai",
+        type: "district",
+        description: "The heart of modern Dubai with iconic landmarks",
+        averagePrice: 1800,
+        popularPropertyTypes: ["apartment", "penthouse"],
+        amenities: ["Dubai Mall", "Burj Khalifa", "Metro Station"]
+      }),
+      new LocationModel({
+        id: 2,
+        name: "Business Bay",
+        type: "district",
+        description: "Dubai's business and financial district",
+        averagePrice: 1500,
+        popularPropertyTypes: ["apartment", "office", "villa"],
+        amenities: ["Canal Views", "Business Centers", "Restaurants"]
+      })
+    ];
+
+    // Property Management System
+    class PropertyManager {
+      constructor() {
+        this.properties = sampleProperties;
+        this.locations = sampleLocations;
+        this.filters = {
+          type: null,
+          transactionType: null,
+          location: null,
+          minPrice: null,
+          maxPrice: null,
+          bedrooms: null
+        };
+      }
+
+      filterProperties(filters = {}) {
+        return this.properties.filter(property => {
+          if (filters.type && property.type !== filters.type) return false;
+          if (filters.transactionType && property.transactionType !== filters.transactionType) return false;
+          if (filters.location && property.location !== filters.location) return false;
+          if (filters.minPrice && property.price < filters.minPrice) return false;
+          if (filters.maxPrice && property.price > filters.maxPrice) return false;
+          if (filters.bedrooms && property.bedrooms !== filters.bedrooms) return false;
+          return true;
+        });
+      }
+
+      getPropertyById(id) {
+        return this.properties.find(property => property.id === id);
+      }
+
+      getFeaturedProperties(limit = 3) {
+        return this.properties.slice(0, limit);
+      }
+
+      getPropertiesByLocation(location) {
+        return this.properties.filter(property => property.location === location);
+      }
+    }
+
+    // Initialize Property Manager
+    const propertyManager = new PropertyManager();
+
+    // Update property cards with real data
+    function updatePropertyCards() {
+      const featuredProperties = propertyManager.getFeaturedProperties();
+      const propertyCards = document.querySelectorAll('.grid > div');
+
+      featuredProperties.forEach((property, index) => {
+        if (propertyCards[index]) {
+          const card = propertyCards[index];
+          const titleElement = card.querySelector('h3');
+          const priceElement = card.querySelector('.text-gray-600:first-of-type');
+          const detailsElement = card.querySelector('.text-gray-600:last-of-type');
+
+          if (titleElement) titleElement.textContent = property.title;
+          if (priceElement) priceElement.textContent = property.getFormattedPrice();
+          if (detailsElement) detailsElement.textContent = property.getPropertyDetails();
+        }
+      });
+    }
+
     // Smooth scroll for navigation and CTA button
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
@@ -136,10 +349,34 @@
       });
     });
 
-    // Property details button click
-    document.querySelectorAll('.view-details').forEach(button => {
+    // Property details button click with real data
+    document.querySelectorAll('.view-details').forEach((button, index) => {
       button.addEventListener('click', () => {
-        alert('Property details page coming soon!');
+        const property = propertyManager.getFeaturedProperties()[index];
+        if (property) {
+          showPropertyDetails(property);
+        }
       });
+    });
+
+    // Property details modal function
+    function showPropertyDetails(property) {
+      const details = `
+        Property: ${property.title}
+        Price: ${property.getFormattedPrice()}
+        Details: ${property.getPropertyDetails()}
+        Location: ${property.location}
+        Developer: ${property.developer}
+        Status: ${property.status}
+        Payment Plan: ${property.paymentPlan}
+        Features: ${property.features.join(', ')}
+        Amenities: ${property.amenities.join(', ')}
+      `;
+      alert(details);
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', function() {
+      updatePropertyCards();
     });
   </script>
