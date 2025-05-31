@@ -1,0 +1,33 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark navy background -->
+  <rect width="200" height="200" fill="#1a1b3a"/>
+
+  <!-- Modern building silhouettes in golden color -->
+  <g fill="#d4af37">
+    <!-- Tallest building (right) -->
+    <path d="M130 60 L130 120 L155 120 L155 75 L145 60 Z"/>
+
+    <!-- Medium building (center) -->
+    <path d="M105 70 L105 120 L130 120 L130 60 L115 70 Z"/>
+
+    <!-- Shortest building (left) -->
+    <path d="M80 85 L80 120 L105 120 L105 70 L90 85 Z"/>
+
+    <!-- Additional smaller building -->
+    <path d="M155 90 L155 120 L170 120 L170 95 L160 90 Z"/>
+  </g>
+
+  <!-- Building outlines for depth -->
+  <g stroke="#d4af37" stroke-width="1.5" fill="none">
+    <path d="M130 60 L130 120 L155 120 L155 75 L145 60 Z"/>
+    <path d="M105 70 L105 120 L130 120 L130 60 L115 70 Z"/>
+    <path d="M80 85 L80 120 L105 120 L105 70 L90 85 Z"/>
+    <path d="M155 90 L155 120 L170 120 L170 95 L160 90 Z"/>
+  </g>
+
+  <!-- JAY text -->
+  <text x="100" y="145" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#d4af37" text-anchor="middle">JAY</text>
+
+  <!-- REAL ESTATE text -->
+  <text x="100" y="160" font-family="Arial, sans-serif" font-size="8" font-weight="normal" fill="#d4af37" text-anchor="middle" letter-spacing="2px">REAL ESTATE</text>
+</svg>
