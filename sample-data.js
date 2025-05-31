@@ -314,6 +314,25 @@ const sampleDevelopers = [
 const sampleAgents = [
   {
     id: 1,
+    name: "Yassine Rhoulam",
+    photo: "/images/agents/yassine.jpg",
+    title: "CEO & Founder",
+    experience: 10,
+    languages: ["English", "Arabic", "French"],
+    specializations: ["Luxury Properties", "Investment Analysis", "Market Strategy", "All Property Types"],
+    locations: ["Downtown Dubai", "Business Bay", "Palm Jumeirah", "Dubai Marina", "All Dubai Areas"],
+    phone: "+971 50 123 4567",
+    email: "yassine@jayrealestate.com",
+    whatsapp: "+971 50 123 4567",
+    rating: 5.0,
+    propertiesSold: 500,
+    propertiesRented: 300,
+    clientSatisfaction: 99,
+    reraLicense: "RERA-CEO-001",
+    certifications: ["RERA Certified", "Real Estate Investment Expert", "Market Analysis Specialist", "CEO Certification"]
+  },
+  {
+    id: 2,
     name: "Ahmed Al Mansouri",
     photo: "/images/agents/ahmed.jpg",
     title: "Senior Property Consultant",
@@ -321,9 +340,9 @@ const sampleAgents = [
     languages: ["English", "Arabic", "Hindi"],
     specializations: ["Luxury Properties", "Downtown Dubai", "Investment"],
     locations: ["Downtown Dubai", "Business Bay", "DIFC"],
-    phone: "+971 50 123 4567",
+    phone: "+971 50 123 4568",
     email: "ahmed@jayrealestate.com",
-    whatsapp: "+971 50 123 4567",
+    whatsapp: "+971 50 123 4568",
     rating: 4.9,
     propertiesSold: 156,
     propertiesRented: 89,
@@ -332,7 +351,7 @@ const sampleAgents = [
     certifications: ["RERA Certified", "Real Estate Investment Specialist"]
   },
   {
-    id: 2,
+    id: 3,
     name: "Sarah Johnson",
     photo: "/images/agents/sarah.jpg",
     title: "Luxury Property Specialist",
