@@ -2,27 +2,27 @@
   <!-- Dark navy background -->
   <rect width="200" height="200" fill="#1a1b3a"/>
 
-  <!-- Modern building outlines in golden color - matching reference design -->
-  <g stroke="#d4af37" stroke-width="2.8" fill="none">
-    <!-- Tallest building (back-right) - angular modern tower -->
-    <path d="M125 45 L140 30 L140 105 L125 105 Z"/>
+  <!-- Exact logo from uploaded image -->
+  <g stroke="#d4af37" stroke-width="2.5" fill="none">
+    <!-- Left curved building -->
+    <path d="M70 95 L70 115 M70 95 Q70 75 85 75 L85 115"/>
 
-    <!-- Medium-tall building (center) - with elegant curve -->
-    <path d="M105 55 L105 105 L125 105 L125 45 Q120 50 105 55"/>
+    <!-- Center-left straight building -->
+    <path d="M95 65 L95 115"/>
 
-    <!-- Medium building (center-left) - straight modern lines -->
-    <path d="M90 65 L90 105 L105 105 L105 55"/>
+    <!-- Center-right straight building -->
+    <path d="M105 55 L105 115"/>
 
-    <!-- Shortest building (front-left) - with curved connection -->
-    <path d="M75 80 L75 105 L90 105 L90 65 Q85 70 75 80"/>
+    <!-- Right tall building with angled top -->
+    <path d="M115 45 L130 30 L130 115"/>
 
-    <!-- Small accent tower (far right) -->
-    <path d="M140 75 L140 105 L150 105 L150 80 L140 75"/>
+    <!-- Far right short building -->
+    <path d="M140 85 L140 115 L150 115 L150 90 L140 85"/>
   </g>
 
   <!-- JAY text -->
-  <text x="100" y="140" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#d4af37" text-anchor="middle">JAY</text>
+  <text x="100" y="140" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#d4af37" text-anchor="middle">JAY</text>
 
   <!-- REAL ESTATE text -->
-  <text x="100" y="158" font-family="Arial, sans-serif" font-size="9" font-weight="normal" fill="#d4af37" text-anchor="middle" letter-spacing="4px">REAL ESTATE</text>
+  <text x="100" y="158" font-family="Arial, sans-serif" font-size="10" font-weight="normal" fill="#d4af37" text-anchor="middle" letter-spacing="6px">REAL ESTATE</text>
 </svg>
