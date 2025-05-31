@@ -318,8 +318,72 @@
       }
     }
 
-    // Initialize Property Manager
+    // Initialize Property Manager with sample data
     const propertyManager = new PropertyManager();
+
+    // Add sample properties directly
+    propertyManager.properties = [
+      new PropertyModel({
+        id: 1,
+        title: "Luxury Downtown Apartment",
+        price: 2500000,
+        currency: "AED",
+        type: "apartment",
+        transactionType: "buy",
+        bedrooms: 2,
+        bathrooms: 2,
+        area: 1200,
+        location: "Downtown Dubai",
+        developer: "Emaar Properties",
+        features: ["Balcony", "City View", "Parking"],
+        description: "Stunning 2-bedroom apartment in the heart of Downtown Dubai",
+        amenities: ["Swimming Pool", "Gym", "Concierge", "Security"],
+        paymentPlan: "70/30 Payment Plan",
+        status: "ready",
+        furnished: true,
+        luxury: true
+      }),
+      new PropertyModel({
+        id: 2,
+        title: "Modern Business Bay Villa",
+        price: 4500000,
+        currency: "AED",
+        type: "villa",
+        transactionType: "buy",
+        bedrooms: 4,
+        bathrooms: 5,
+        area: 3500,
+        location: "Business Bay",
+        developer: "DAMAC Properties",
+        features: ["Private Garden", "Maid's Room", "Study Room"],
+        description: "Spacious 4-bedroom villa with modern amenities",
+        amenities: ["Private Pool", "Garden", "Garage", "Security"],
+        paymentPlan: "60/40 Payment Plan",
+        status: "under-construction",
+        luxury: true
+      }),
+      new PropertyModel({
+        id: 3,
+        title: "Palm Jumeirah Beachfront Penthouse",
+        price: 8500000,
+        currency: "AED",
+        type: "penthouse",
+        transactionType: "buy",
+        bedrooms: 3,
+        bathrooms: 4,
+        area: 2800,
+        location: "Palm Jumeirah",
+        developer: "Nakheel",
+        features: ["Beach Access", "Private Terrace", "Sea View"],
+        description: "Exclusive beachfront penthouse with panoramic sea views",
+        amenities: ["Beach Access", "Spa", "Marina", "Restaurants"],
+        paymentPlan: "50/50 Payment Plan",
+        status: "ready",
+        furnished: true,
+        luxury: true,
+        beachfront: true
+      })
+    ];
 
     // Update property cards with real data
     function updatePropertyCards() {
