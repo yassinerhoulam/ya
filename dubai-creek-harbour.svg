@@ -1,0 +1,109 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Futuristic sky -->
+  <defs>
+    <linearGradient id="futureSkyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEFA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="creekGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="towerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="smartBuildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0F8FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6E6FA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="400" height="200" fill="url(#futureSkyGradient)"/>
+  
+  <!-- Dubai Creek -->
+  <path d="M0 180 Q100 170 200 175 T400 180 L400 220 Q300 210 200 215 T0 220 Z" fill="url(#creekGradient)"/>
+  
+  <!-- Creek banks -->
+  <rect y="220" width="400" height="80" fill="#DEB887"/>
+  
+  <!-- Dubai Creek Tower (world's tallest) -->
+  <g fill="url(#towerGradient)" stroke="#696969" stroke-width="1">
+    <polygon points="200,30 205,180 195,180" fill="url(#towerGradient)"/>
+    <!-- Tower top -->
+    <circle cx="200" cy="30" r="8" fill="#FFD700"/>
+  </g>
+  
+  <!-- Smart residential buildings -->
+  <g fill="url(#smartBuildingGradient)" stroke="#B0C4DE" stroke-width="1">
+    <!-- Building 1 -->
+    <rect x="120" y="100" width="35" height="80" rx="2"/>
+    <!-- Building 2 -->
+    <rect x="160" y="90" width="30" height="90" rx="2"/>
+    <!-- Building 3 -->
+    <rect x="220" y="95" width="32" height="85" rx="2"/>
+    <!-- Building 4 -->
+    <rect x="260" y="105" width="28" height="75" rx="2"/>
+  </g>
+  
+  <!-- Smart building features (LED windows) -->
+  <g fill="#00FFFF" opacity="0.8">
+    <!-- Building 1 smart windows -->
+    <rect x="125" y="110" width="4" height="6"/>
+    <rect x="135" y="110" width="4" height="6"/>
+    <rect x="145" y="110" width="4" height="6"/>
+    <rect x="125" y="130" width="4" height="6"/>
+    <rect x="135" y="130" width="4" height="6"/>
+    <rect x="145" y="130" width="4" height="6"/>
+    
+    <!-- Building 2 smart windows -->
+    <rect x="165" y="100" width="4" height="6"/>
+    <rect x="175" y="100" width="4" height="6"/>
+    <rect x="165" y="120" width="4" height="6"/>
+    <rect x="175" y="120" width="4" height="6"/>
+    
+    <!-- Building 3 smart windows -->
+    <rect x="225" y="105" width="4" height="6"/>
+    <rect x="235" y="105" width="4" height="6"/>
+    <rect x="245" y="105" width="4" height="6"/>
+    <rect x="225" y="125" width="4" height="6"/>
+    <rect x="235" y="125" width="4" height="6"/>
+    <rect x="245" y="125" width="4" height="6"/>
+  </g>
+  
+  <!-- Marina and boats -->
+  <g>
+    <!-- Marina dock -->
+    <rect x="80" y="175" width="60" height="3" fill="#8B4513"/>
+    <rect x="280" y="175" width="50" height="3" fill="#8B4513"/>
+    
+    <!-- Boats -->
+    <ellipse cx="110" cy="185" rx="12" ry="4" fill="white"/>
+    <ellipse cx="300" cy="185" rx="10" ry="3" fill="white"/>
+  </g>
+  
+  <!-- Smart city elements -->
+  <g>
+    <!-- Solar panels on buildings -->
+    <rect x="125" y="95" width="20" height="3" fill="#191970"/>
+    <rect x="225" y="90" width="22" height="3" fill="#191970"/>
+    
+    <!-- Green spaces -->
+    <circle cx="90" cy="200" r="8" fill="#32CD32"/>
+    <circle cx="320" cy="205" r="6" fill="#32CD32"/>
+  </g>
+  
+  <!-- Futuristic elements -->
+  <g stroke="#00FFFF" stroke-width="1" fill="none" opacity="0.6">
+    <!-- Connection lines between buildings (smart city network) -->
+    <line x1="137" y1="120" x2="175" y2="110"/>
+    <line x1="175" y1="110" x2="236" y2="115"/>
+    <line x1="236" y1="115" x2="274" y2="125"/>
+  </g>
+  
+  <!-- Project title overlay -->
+  <rect x="0" y="250" width="400" height="50" fill="rgba(0,0,0,0.7)"/>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Dubai Creek Harbour</text>
+  <text x="200" y="290" font-family="Arial, sans-serif" font-size="12" fill="#00FFFF" text-anchor="middle">Smart City • World's Tallest Tower</text>
+</svg>

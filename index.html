@@ -146,35 +146,51 @@
   <!-- Properties Section -->
   <section id="properties" class="py-16 bg-gray-100">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Featured Properties</h2>
+      <h2 class="text-3xl font-bold text-center mb-4">Latest Off-Plan Projects in Dubai</h2>
+      <p class="text-center text-gray-600 mb-12">Discover the newest luxury developments from Dubai's leading developers</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Property Card 1 -->
+        <!-- Property Card 1 - Emaar Beachfront -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img src="property1.jpg" alt="Property 1" class="w-full h-48 object-cover"> <!-- Replace with Figma-exported image -->
+          <img src="emaar-beachfront.svg" alt="Emaar Beachfront" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Modern Villa</h3>
-            <p class="text-gray-600 mb-2">$500,000</p>
-            <p class="text-gray-600 mb-4">3 Beds | 2 Baths | 2,000 sqft</p>
+            <h3 class="text-xl font-semibold mb-2">Emaar Beachfront Apartments</h3>
+            <p class="text-gray-600 mb-2">AED 3,200,000</p>
+            <p class="text-gray-600 mb-4">2 Beds | 2 Baths | 1,400 sqft</p>
+            <div class="flex flex-wrap gap-1 mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Off-Plan</span>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Beachfront</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Luxury</span>
+            </div>
             <button class="view-details bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">View Details</button>
           </div>
         </div>
-        <!-- Property Card 2 -->
+        <!-- Property Card 2 - DAMAC Lagoons -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img src="property2.jpg" alt="Property 2" class="w-full h-48 object-cover"> <!-- Replace with Figma-exported image -->
+          <img src="damac-lagoons.svg" alt="DAMAC Lagoons" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">City Apartment</h3>
-            <p class="text-gray-600 mb-2">$350,000</p>
-            <p class="text-gray-600 mb-4">2 Beds | 1 Bath | 1,200 sqft</p>
+            <h3 class="text-xl font-semibold mb-2">DAMAC Lagoons Villas</h3>
+            <p class="text-gray-600 mb-2">AED 2,800,000</p>
+            <p class="text-gray-600 mb-4">4 Beds | 5 Baths | 3,200 sqft</p>
+            <div class="flex flex-wrap gap-1 mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Off-Plan</span>
+              <span class="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">Lagoons</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Luxury</span>
+            </div>
             <button class="view-details bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">View Details</button>
           </div>
         </div>
-        <!-- Property Card 3 -->
+        <!-- Property Card 3 - Dubai Creek Harbour -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-          <img src="property3.jpg" alt="Property 3" class="w-full h-48 object-cover"> <!-- Replace with Figma-exported image -->
+          <img src="dubai-creek-harbour.svg" alt="Dubai Creek Harbour" class="w-full h-48 object-cover">
           <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Suburban House</h3>
-            <p class="text-gray-600 mb-2">$650,000</p>
-            <p class="text-gray-600 mb-4">4 Beds | 3 Baths | 2,800 sqft</p>
+            <h3 class="text-xl font-semibold mb-2">Dubai Creek Harbour Residences</h3>
+            <p class="text-gray-600 mb-2">AED 4,500,000</p>
+            <p class="text-gray-600 mb-4">3 Beds | 3 Baths | 2,100 sqft</p>
+            <div class="flex flex-wrap gap-1 mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Off-Plan</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Smart City</span>
+              <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Luxury</span>
+            </div>
             <button class="view-details bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">View Details</button>
           </div>
         </div>
@@ -489,67 +505,69 @@
     // Initialize Property Manager with sample data
     const propertyManager = new PropertyManager();
 
-    // Add sample properties directly
+    // Add latest off-plan properties from Dubai 2024-2025
     propertyManager.properties = [
       new PropertyModel({
         id: 1,
-        title: "Luxury Downtown Apartment",
-        price: 2500000,
+        title: "Emaar Beachfront Apartments",
+        price: 3200000,
         currency: "AED",
         type: "apartment",
         transactionType: "buy",
         bedrooms: 2,
         bathrooms: 2,
-        area: 1200,
-        location: "Downtown Dubai",
+        area: 1400,
+        location: "Dubai Harbour",
         developer: "Emaar Properties",
-        features: ["Balcony", "City View", "Parking"],
-        description: "Stunning 2-bedroom apartment in the heart of Downtown Dubai",
-        amenities: ["Swimming Pool", "Gym", "Concierge", "Security"],
+        features: ["Private Beach Access", "Marina Views", "Premium Finishes"],
+        description: "Exclusive waterfront apartments with Arabian Gulf views between JBR and Palm Jumeirah",
+        amenities: ["Private Beach", "Marina Access", "World-class Amenities", "Gated Community"],
         paymentPlan: "70/30 Payment Plan",
-        status: "ready",
-        furnished: true,
-        luxury: true
+        status: "off-plan",
+        furnished: false,
+        luxury: true,
+        beachfront: true
       }),
       new PropertyModel({
         id: 2,
-        title: "Modern Business Bay Villa",
-        price: 4500000,
+        title: "DAMAC Lagoons Villas",
+        price: 2800000,
         currency: "AED",
         type: "villa",
         transactionType: "buy",
         bedrooms: 4,
         bathrooms: 5,
-        area: 3500,
-        location: "Business Bay",
+        area: 3200,
+        location: "DAMAC Lagoons",
         developer: "DAMAC Properties",
-        features: ["Private Garden", "Maid's Room", "Study Room"],
-        description: "Spacious 4-bedroom villa with modern amenities",
-        amenities: ["Private Pool", "Garden", "Garage", "Security"],
-        paymentPlan: "60/40 Payment Plan",
-        status: "under-construction",
-        luxury: true
+        features: ["Crystal Lagoons", "Mediterranean Design", "Private Pool"],
+        description: "Mediterranean-inspired villas with crystal-clear lagoons and sandy beaches",
+        amenities: ["Crystal Lagoons", "Sandy Beaches", "Themed Clusters", "Water Sports"],
+        paymentPlan: "80/20 Payment Plan",
+        status: "off-plan",
+        luxury: true,
+        waterfront: true
       }),
       new PropertyModel({
         id: 3,
-        title: "Palm Jumeirah Beachfront Penthouse",
-        price: 8500000,
+        title: "Dubai Creek Harbour Residences",
+        price: 4500000,
         currency: "AED",
-        type: "penthouse",
+        type: "apartment",
         transactionType: "buy",
         bedrooms: 3,
-        bathrooms: 4,
-        area: 2800,
-        location: "Palm Jumeirah",
-        developer: "Nakheel",
-        features: ["Beach Access", "Private Terrace", "Sea View"],
-        description: "Exclusive beachfront penthouse with panoramic sea views",
-        amenities: ["Beach Access", "Spa", "Marina", "Restaurants"],
-        paymentPlan: "50/50 Payment Plan",
-        status: "ready",
-        furnished: true,
+        bathrooms: 3,
+        area: 2100,
+        location: "Dubai Creek Harbour",
+        developer: "Emaar Properties",
+        features: ["Creek Views", "Smart Home Technology", "World's Tallest Tower Proximity"],
+        description: "Iconic waterfront development featuring the world's tallest tower and sustainable living",
+        amenities: ["Dubai Creek Tower", "Marina", "Smart City Infrastructure", "Retail Hubs"],
+        paymentPlan: "60/40 Payment Plan",
+        status: "off-plan",
+        furnished: false,
         luxury: true,
-        beachfront: true
+        waterfront: true
       })
     ];
 

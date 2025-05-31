@@ -1,0 +1,91 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky gradient background -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4682B4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5DC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D2B48C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="400" height="200" fill="url(#skyGradient)"/>
+  
+  <!-- Water/Sea -->
+  <rect y="200" width="400" height="100" fill="url(#waterGradient)"/>
+  
+  <!-- Beach -->
+  <rect y="280" width="400" height="20" fill="#F4A460"/>
+  
+  <!-- Modern beachfront towers -->
+  <g fill="url(#buildingGradient)" stroke="#8B7355" stroke-width="1">
+    <!-- Tower 1 -->
+    <rect x="80" y="80" width="40" height="120" rx="2"/>
+    <!-- Tower 2 -->
+    <rect x="140" y="60" width="45" height="140" rx="2"/>
+    <!-- Tower 3 -->
+    <rect x="200" y="70" width="42" height="130" rx="2"/>
+    <!-- Tower 4 -->
+    <rect x="260" y="90" width="38" height="110" rx="2"/>
+  </g>
+  
+  <!-- Building windows -->
+  <g fill="#4A90E2" opacity="0.7">
+    <!-- Tower 1 windows -->
+    <rect x="85" y="90" width="6" height="8"/>
+    <rect x="95" y="90" width="6" height="8"/>
+    <rect x="105" y="90" width="6" height="8"/>
+    <rect x="85" y="110" width="6" height="8"/>
+    <rect x="95" y="110" width="6" height="8"/>
+    <rect x="105" y="110" width="6" height="8"/>
+    <rect x="85" y="130" width="6" height="8"/>
+    <rect x="95" y="130" width="6" height="8"/>
+    <rect x="105" y="130" width="6" height="8"/>
+    
+    <!-- Tower 2 windows -->
+    <rect x="145" y="70" width="6" height="8"/>
+    <rect x="155" y="70" width="6" height="8"/>
+    <rect x="165" y="70" width="6" height="8"/>
+    <rect x="175" y="70" width="6" height="8"/>
+    <rect x="145" y="90" width="6" height="8"/>
+    <rect x="155" y="90" width="6" height="8"/>
+    <rect x="165" y="90" width="6" height="8"/>
+    <rect x="175" y="90" width="6" height="8"/>
+    
+    <!-- Tower 3 windows -->
+    <rect x="205" y="80" width="6" height="8"/>
+    <rect x="215" y="80" width="6" height="8"/>
+    <rect x="225" y="80" width="6" height="8"/>
+    <rect x="235" y="80" width="6" height="8"/>
+    <rect x="205" y="100" width="6" height="8"/>
+    <rect x="215" y="100" width="6" height="8"/>
+    <rect x="225" y="100" width="6" height="8"/>
+    <rect x="235" y="100" width="6" height="8"/>
+  </g>
+  
+  <!-- Palm trees -->
+  <g>
+    <!-- Palm tree 1 -->
+    <rect x="48" y="180" width="4" height="40" fill="#8B4513"/>
+    <ellipse cx="50" cy="175" rx="12" ry="8" fill="#228B22"/>
+    
+    <!-- Palm tree 2 -->
+    <rect x="320" y="185" width="4" height="35" fill="#8B4513"/>
+    <ellipse cx="322" cy="180" rx="10" ry="6" fill="#228B22"/>
+  </g>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="50" r="25" fill="#FFD700" opacity="0.8"/>
+  
+  <!-- Project title overlay -->
+  <rect x="0" y="250" width="400" height="50" fill="rgba(0,0,0,0.7)"/>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Emaar Beachfront</text>
+  <text x="200" y="290" font-family="Arial, sans-serif" font-size="12" fill="#FFD700" text-anchor="middle">Dubai Harbour • Off-Plan 2024</text>
+</svg>
